@@ -80,11 +80,20 @@ const Home = () => {
     { code: '+92',  name: 'PK' }
   ];
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCycleIdx(prev => (prev + 1) % CYCLE_WORDS.length);
     }, 2000);
-    return () => clearInterval(timer);
+
+    const handleResize = () => setIsMobile(window.innerWidth <= 900);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const handleInquirySubmit = async (e) => {
@@ -120,7 +129,7 @@ const Home = () => {
               splitType="words"
               from={{ opacity: 0, y: 40 }}
               to={{ opacity: 1, y: 0 }}
-              textAlign="center"
+              textAlign={isMobile ? "center" : "left"}
               tag="h1"
             />
 
