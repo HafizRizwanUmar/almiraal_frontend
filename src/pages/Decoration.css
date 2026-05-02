@@ -1,0 +1,172 @@
+.deco-page {
+  overflow-x: hidden;
+  padding-top: 100px;
+}
+
+/* ── HERO ── */
+.deco-hero {
+  text-align: center;
+  padding: 80px 0;
+  background: #f8faf5;
+}
+
+.deco-tag {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #85B344;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.deco-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #1a3311;
+  margin-bottom: 20px;
+}
+
+.deco-sub {
+  font-family: 'Mada', sans-serif;
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── SECTIONS ── */
+.deco-section {
+  padding: 100px 0;
+  background: white;
+}
+.deco-section.bg-light { background: #fdfdfd; }
+
+.deco-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.deco-grid.reverse {
+  grid-template-columns: 1.2fr 1fr;
+}
+.deco-grid.reverse .deco-text-side { order: 2; }
+.deco-grid.reverse .deco-image-side { order: 1; }
+
+.deco-service-icon {
+  width: 50px;
+  height: 50px;
+  background: #eef4e8;
+  color: #85B344;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.deco-text-side h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #85B344;
+  margin-bottom: 8px;
+}
+
+.deco-text-side h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #1a3311;
+  margin-bottom: 20px;
+}
+
+.deco-text-side p {
+  font-family: 'Mada', sans-serif;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.deco-features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.deco-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.deco-features li strong { color: #1a3311; }
+.deco-features li svg { color: #85B344; flex-shrink: 0; margin-top: 2px; }
+
+/* ── IMAGES ── */
+.deco-image-side {
+  border-radius: 24px;
+  overflow: hidden;
+  background: white;
+}
+
+.full-view-img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain; /* Don't cut! */
+  display: block;
+}
+
+/* ── FOOTER BANNER ── */
+.deco-footer-banner {
+  background: #1a3311;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.deco-footer-banner h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.deco-footer-banner p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+@media (max-width: 991px) {
+  .deco-grid, .deco-grid.reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .deco-text-side { order: 1 !important; }
+  .deco-image-side { order: 2 !important; }
+  .deco-service-icon { margin: 0 auto 20px; }
+  .deco-features { align-items: center; }
+  .deco-features li { text-align: left; }
+}
+
+@media (max-width: 768px) {
+  .deco-title { font-size: 32px; }
+  .deco-text-side h3 { font-size: 26px; }
+}

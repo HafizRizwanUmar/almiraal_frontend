@@ -1,0 +1,275 @@
+/* =============================================
+   NAVBAR – Fixed, Fully Transparent Glass
+   ============================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Transparent — hero shows through */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0 40px;
+  height: 72px;
+  /* Fixed so it overlays the hero */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  transition: background 0.4s ease;
+}
+
+/* Slightly more visible when scrolled */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.nav-left .logo-container img {
+  height: 52px;
+}
+
+/* ---- Center links — pushed right ---- */
+.nav-center {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-left: auto; 
+  margin-right: 40px; /* Space before the buttons */
+}
+
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a3311;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #85B344;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+
+.nav-link:hover,
+.nav-link.active { color: #85B344; }
+
+/* ---- Dropdowns ---- */
+.dropdown { position: relative; }
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  animation: dropIn 0.2s ease;
+  border: 1px solid #f0f0f0;
+}
+
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu a {
+  padding: 11px 22px;
+  text-decoration: none;
+  color: #333;
+  font-size: 12.5px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f9ef;
+  color: #85B344;
+}
+
+/* ---- Right buttons ---- */
+.nav-right {
+  display: flex;
+  height: 100%;
+  gap: 1px; /* Small separation */
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 36px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a3311;
+  position: relative;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-contact  { background-color: #dce9c6; }
+.btn-customize{ background-color: #a6cd6c; }
+.btn-contact:hover, .btn-contact.active { background-color: #cce0ae; }
+.btn-customize:hover, .btn-customize.active { background-color: #97c255; }
+
+.btn-contact.active .diamond, .btn-customize.active .diamond {
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+}
+
+.btn-contact.active .arrow-circle, .btn-customize.active .arrow-circle {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Diamond – default visible */
+.diamond {
+  width: 8px;
+  height: 8px;
+  background-color: #1a3311;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nav-btn:hover .diamond {
+  opacity: 0;
+  transform: rotate(45deg) scale(0);
+}
+
+/* Arrow circle – hidden by default, shown on hover */
+.arrow-circle {
+  width: 28px;
+  height: 28px;
+  background-color: #1a3311;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nav-btn:hover .arrow-circle {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .navbar { padding-left: 20px; }
+  .nav-center { gap: 20px; }
+  .nav-btn { padding: 0 24px; }
+}
+
+.nav-mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-center, .nav-right { display: none; }
+
+  .nav-mobile-toggle {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a3311;
+    padding: 8px;
+    z-index: 10000;
+  }
+
+  .nav-center.mobile-show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: #ffffff;
+    padding: 100px 30px 40px;
+    gap: 20px;
+    margin: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    animation: mobileFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes mobileFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-center.mobile-show .nav-link {
+    font-size: 18px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+    color: #1a3311;
+  }
+
+  .nav-center.mobile-show .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 0 0 0 20px;
+    background: transparent;
+    display: flex;
+    gap: 15px;
+  }
+
+  .nav-center.mobile-show .dropdown-menu a {
+    padding: 8px 0;
+    font-size: 15px;
+  }
+
+  .mobile-only-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 2px solid #85B344;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar.mobile-open {
+    background: white;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar { padding: 0 20px; }
+  .nav-left .logo-container img { height: 40px; }
+}
+
+

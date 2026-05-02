@@ -1,0 +1,167 @@
+/* =============================================
+   PRODUCT SHOWCASE — Half-Circle Orbit
+   ============================================= */
+
+.ps-section {
+  background: #f8faf5;
+  min-height: 540px;
+  overflow: hidden;
+}
+
+.ps-inner {
+  display: flex;
+  align-items: stretch;
+  min-height: 540px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ── LEFT: Image (smaller, link only, no banner) ── */
+.ps-img-link {
+  display: block;
+  flex: 0 0 450px;
+  width: 450px;
+  overflow: hidden;
+  text-decoration: none;
+  animation: psFade 0.5s ease;
+  position: relative;
+}
+
+@keyframes psFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ps-img-link {
+  display: block;
+  flex: 0 0 450px;
+  width: 450px;
+  overflow: hidden;
+  text-decoration: none;
+  animation: psFade 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.ps-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.ps-img-link:hover .ps-main-img { transform: scale(1.05); }
+
+/* ── CENTER: Text ── */
+.ps-text-col {
+  flex: 1;
+  padding: 60px 50px 60px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: psFade 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ps-kicker {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #aaa;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ps-h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 44px;
+  font-weight: 500;
+  color: #1a3311;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.ps-intro {
+  font-family: 'Mada', sans-serif;
+  font-size: 14.5px;
+  color: #777;
+  line-height: 1.75;
+  max-width: 460px;
+}
+
+.ps-divider {
+  height: 1px;
+  background: linear-gradient(to right, #c8dda8, transparent);
+  margin: 28px 0;
+  max-width: 360px;
+}
+
+.ps-h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: #85B344;
+  margin-bottom: 12px;
+}
+
+.ps-body {
+  font-family: 'Mada', sans-serif;
+  font-size: 14.5px;
+  color: #666;
+  line-height: 1.75;
+  max-width: 460px;
+}
+
+/* ── RIGHT: Half-circle orbit ── */
+.ps-orbit-wrap {
+  flex: 0 0 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: visible;
+  position: relative;
+}
+
+.ps-orbit-item {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.ps-orbit-item circle {
+  transition: fill 0.4s ease, r 0.4s ease, stroke 0.4s ease;
+}
+
+.ps-orbit-item image {
+  transition: opacity 0.4s ease;
+}
+
+.ps-orbit-svg {
+  width: 220px;
+  height: 420px;
+  overflow: visible;
+  /* Offset so arc edge bleeds to the right */
+  margin-right: -20px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .ps-img-link  { flex: 0 0 240px; width: 240px; }
+  .ps-orbit-wrap{ flex: 0 0 180px; width: 180px; }
+  .ps-text-col  { padding: 50px 32px; }
+}
+
+@media (max-width: 900px) {
+  .ps-orbit-wrap { display: none; }
+  .ps-img-link   { flex: 0 0 220px; width: 220px; }
+}
+
+@media (max-width: 700px) {
+  .ps-inner      { flex-direction: column; min-height: auto; }
+  .ps-img-link   { flex: none; width: 100%; min-height: 260px; }
+  .ps-text-col   { padding: 36px 24px; }
+  .ps-h2         { font-size: 32px; }
+  .ps-h3         { font-size: 20px; }
+}
+
+
