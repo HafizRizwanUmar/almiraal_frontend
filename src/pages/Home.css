@@ -573,7 +573,7 @@
 @media (max-width: 768px) {
   .services-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
   .services-header h2 { font-size: 32px; }
-  .hero-text h1 { font-size: 28px; }
+  .hero-text h1 { font-size: 28px; text-align: center;}
   .contact-card { padding: 28px 20px; }
   .services-section { padding: 60px 0; }
   .thumbnail-item { width: 100px; height: 110px; }
