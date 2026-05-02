@@ -12,27 +12,9 @@ import MarketingContent from '../components/MarketingContent';
    Hero thumbnail data
 ------------------------------------------------------- */
 const heroItems = [
-  {
-    id: 1,
-    label: 'Premium Bottles',
-    thumb: '/customize/bottles-100ml/Mira.png',
-    preview: '/customize/bottles-100ml/Mira.png',
-    desc: 'High-quality glass bottles designed to showcase your fragrance in style.'
-  },
-  {
-    id: 2,
-    label: 'Luxury Caps',
-    thumb: '/customize/caps/Amour.png',
-    preview: '/customize/caps/Amour.png',
-    desc: 'Elegant caps that add a touch of sophistication to any perfume bottle.'
-  },
-  {
-    id: 3,
-    label: 'Precision Pumps',
-    thumb: '/customize/pumps/5.png',
-    preview: '/customize/pumps/5.png',
-    desc: 'Reliable and high-performance pumps for a perfect mist every time.'
-  }
+  { id: 10, thumb: '/catalog_products/and-perfume-bottle-4942.png', label: 'Bottle' },
+  { id: 11, thumb: '/catalog_products/angel-perfume-bottle-4952.png', label: 'Bottle' },
+  { id: 12, thumb: '/catalog_products/atlas-perfume-bottle-4963.png', label: 'Bottle' }
 ];
 
 const serviceCards = [
@@ -59,8 +41,8 @@ const serviceCards = [
 const CYCLE_WORDS = ['HOT STAMPING', 'SCREEN PRINTING', 'COLOUR COATING'];
 
 const Home = () => {
-  const [hoveredItem, setHoveredItem] = useState(null);
   const [cycleIdx, setCycleIdx]       = useState(0);
+  const [activeCategory, setActiveCategory] = useState('bottles');
 
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [countryCode, setCountryCode] = useState('+971');
@@ -113,6 +95,22 @@ const Home = () => {
     finally { setLoading(false); }
   };
 
+  const categoryThumbnails = {
+    bottles: heroItems,
+    caps: [
+      { id: 20, thumb: '/catalog_products/12-perfume-cap-4435.png', label: 'Cap' },
+      { id: 21, thumb: '/catalog_products/amour-perfume-cap-4493.png', label: 'Cap' },
+      { id: 22, thumb: '/catalog_products/arrow-perfume-cap-4497.png', label: 'Cap' }
+    ],
+    pumps: [
+      { id: 30, thumb: '/catalog_products/15-mm-matte-pump-5674.png', label: 'Pump' },
+      { id: 31, thumb: '/catalog_products/18-mm-pump-pump-5678.png', label: 'Pump' },
+      { id: 32, thumb: '/catalog_products/20-mm-pump-pump-5682.png', label: 'Pump' }
+    ]
+  };
+
+  const currentThumbnails = categoryThumbnails[activeCategory] || heroItems;
+
   return (
     <div className="home-page fade-in">
 
@@ -120,10 +118,22 @@ const Home = () => {
       <div className="hero-section">
         <div className="hero-content container">
           <div className="hero-text">
-                        <SplitText
-              text="Discover The Art of Glass Perfume Packaging"
-              className="hero-title"
-              delay={50}
+            <SplitText
+              text="Discover The Art of Glass"
+              className="hero-title line-1"
+              delay={40}
+              duration={0.8}
+              ease="power3.out"
+              splitType="words"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              textAlign={isMobile ? "center" : "left"}
+              tag="h1"
+            />
+            <SplitText
+              text="Perfume Packaging"
+              className="hero-title line-2"
+              delay={100}
               duration={0.8}
               ease="power3.out"
               splitType="words"
@@ -133,33 +143,41 @@ const Home = () => {
               tag="h1"
             />
 
-            <p>Welcome to Al Miraal! We are the top choice for perfume packaging that combines high quality with great design. Our collection of perfume bottles has everything you need to make your brand shine. From stylish designs to durable materials, we provide the best options to suit your needs and budget.</p>
+            <p>Welcome to Al Miraal! We are the top choice for perfume <br></br> packaging that combines high quality with great design. <br></br>Our collection of perfume bottles has everything you need to make your <br></br>brand shine. From stylish designs to durable materials, we <br></br>provide the best options to suit your needs and budget.</p>
+            <div className="hero-thumbnails">
+              {currentThumbnails.map(item => (
+                <div
+                  key={item.id}
+                  onMouseEnter={() => {}}
+                  onMouseLeave={() => {}}
+                  className="thumbnail-item"
+                >
+                  <img src={item.thumb} alt={item.label} />
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="hero-thumbnails">
-            {heroItems.map(item => (
-              <div
-                key={item.id}
-                className={`thumbnail-item ${hoveredItem === item.id ? 'active' : ''}`}
-                onMouseEnter={() => setHoveredItem(item.id)}
-                onMouseLeave={() => setHoveredItem(null)}
-              >
-                <img src={item.thumb} alt={item.label} />
-              </div>
-            ))}
-          </div>
-          <div className={`hero-preview-card ${hoveredItem ? 'visible' : ''}`}>
-            {hoveredItem && (() => {
-              const item = heroItems.find(i => i.id === hoveredItem);
-              return (
-                <>
-                  <img src={item.preview} alt={item.label} />
-                  <div className="preview-body">
-                    <h4>{item.label}</h4>
-                    <p>{item.desc}</p>
-                  </div>
-                </>
-              );
-            })()}
+          
+          {/* HOTSPOT DOTS */}
+          <div className="hero-hotspots">
+            <div 
+              className={`hotspot-dot cap-dot ${activeCategory === 'caps' ? 'active' : ''}`} 
+              onMouseEnter={() => setActiveCategory('caps')}
+              onMouseLeave={() => setActiveCategory('mixed')}
+              data-label="Luxury Caps"
+            ></div>
+            <div 
+              className={`hotspot-dot bottle-dot ${activeCategory === 'bottles' ? 'active' : ''}`} 
+              onMouseEnter={() => setActiveCategory('bottles')}
+              onMouseLeave={() => setActiveCategory('mixed')}
+              data-label="Premium Bottles"
+            ></div>
+            <div 
+              className={`hotspot-dot pump-dot ${activeCategory === 'pumps' ? 'active' : ''}`} 
+              onMouseEnter={() => setActiveCategory('pumps')}
+              onMouseLeave={() => setActiveCategory('mixed')}
+              data-label="Precision Pumps"
+            ></div>
           </div>
         </div>
         <div className="explore-services">
