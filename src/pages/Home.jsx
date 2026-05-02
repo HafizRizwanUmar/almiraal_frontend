@@ -120,7 +120,7 @@ const Home = () => {
               splitType="words"
               from={{ opacity: 0, y: 40 }}
               to={{ opacity: 1, y: 0 }}
-              textAlign="left"
+              textAlign="center"
               tag="h1"
             />
 
