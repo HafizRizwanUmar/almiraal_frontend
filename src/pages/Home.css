@@ -62,17 +62,16 @@
 
 .thumbnail-item {
   width: 130px;
-  height: 145px;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(6px);
-  border: 1.5px solid rgba(255,255,255,0.9);
-  border-radius: 18px;
+  height: 175px;
+  background: white;
+  border: 2px solid #1a3311;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  padding: 12px;
   cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   overflow: hidden;
 }
 
@@ -561,11 +560,19 @@
     color: #1a3311; 
   }
   .hero-text p { display: none; }
-  .hero-preview-card { 
+  .hero-thumbnails { 
+    display: flex;
     justify-content: center; 
-    flex-wrap: wrap; 
+    gap: 12px;
+    flex-wrap: nowrap; 
     margin-top: auto; /* Absolute push to bottom */
     padding-bottom: 30px;
+    width: 100%;
+  }
+  .thumbnail-item {
+    width: 105px;
+    height: 150px;
+    padding: 10px;
   }
   .hero-visual { display: none; }
   .form-row { flex-direction: column; gap: 0; }
