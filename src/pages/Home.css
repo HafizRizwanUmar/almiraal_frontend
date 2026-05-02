@@ -533,16 +533,36 @@
 
 @media (max-width: 900px) {
   .hero-section { 
-    min-height: 75vh; 
+    min-height: 85vh; 
     height: auto; 
-    padding: 140px 0 80px;
+    padding: 120px 0 40px;
     background: url('/Banner/7.jpg') no-repeat center center / cover;
   }
-  .hero-content { padding-top: 0; }
-  .hero-text { text-align: center; max-width: 100%; }
-  .hero-text h1 { font-weight: 800; font-size: 32px; color: #1a3311; }
+  .hero-content { 
+    padding-top: 0; 
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: center;
+  }
+  .hero-text { 
+    text-align: center; 
+    max-width: 100%; 
+    margin-bottom: auto; /* Pushes cards to bottom */
+  }
+  .hero-text h1 { 
+    font-weight: 800; 
+    font-size: 32px; 
+    color: #1a3311; 
+    margin-top: 20px;
+  }
   .hero-text p { display: none; }
-  .hero-thumbnails { justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+  .hero-thumbnails { 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
   .hero-visual { display: none; }
   .form-row { flex-direction: column; gap: 0; }
 }
