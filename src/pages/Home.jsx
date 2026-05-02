@@ -125,18 +125,18 @@ const Home = () => {
             />
 
             <p>Welcome to Al Miraal! We are the top choice for perfume packaging that combines high quality with great design. Our collection of perfume bottles has everything you need to make your brand shine. From stylish designs to durable materials, we provide the best options to suit your needs and budget.</p>
-            <div className="hero-thumbnails">
-              {heroItems.map(item => (
-                <div
-                  key={item.id}
-                  className={`thumbnail-item ${hoveredItem === item.id ? 'active' : ''}`}
-                  onMouseEnter={() => setHoveredItem(item.id)}
-                  onMouseLeave={() => setHoveredItem(null)}
-                >
-                  <img src={item.thumb} alt={item.label} />
-                </div>
-              ))}
-            </div>
+          </div>
+          <div className="hero-thumbnails">
+            {heroItems.map(item => (
+              <div
+                key={item.id}
+                className={`thumbnail-item ${hoveredItem === item.id ? 'active' : ''}`}
+                onMouseEnter={() => setHoveredItem(item.id)}
+                onMouseLeave={() => setHoveredItem(null)}
+              >
+                <img src={item.thumb} alt={item.label} />
+              </div>
+            ))}
           </div>
           <div className={`hero-preview-card ${hoveredItem ? 'visible' : ''}`}>
             {hoveredItem && (() => {
