@@ -552,19 +552,19 @@
   .hero-text { 
     text-align: center; 
     max-width: 100%; 
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .hero-text h1 { 
     font-weight: 900; 
-    font-size: 42px; 
+    font-size: 48px; 
+    text-align: center;
     color: #1a3311; 
   }
   .hero-text p { display: none; }
   .hero-thumbnails { 
     justify-content: center; 
     flex-wrap: wrap; 
-    margin-top: auto; /* Absolute push to bottom */
-    padding-bottom: 30px;
+    margin-top: 80px; /* Absolute push to bottom */
   }
   .hero-visual { display: none; }
   .form-row { flex-direction: column; gap: 0; }
