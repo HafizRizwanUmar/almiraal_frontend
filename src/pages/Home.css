@@ -615,13 +615,22 @@
     justify-content: center; 
     gap: 12px;
     flex-wrap: nowrap; 
-    margin-top: 30px; /* Space under paragraph */
-    padding-bottom: 20px;
+    margin-top: auto; /* Push to bottom */
+    padding-bottom: 40px;
     width: 100%;
+    z-index: 20;
   }
   .hero-hotspots {
-    display: none; /* Hide complex hotspots on small mobile */
+    display: block; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
+  .cap-dot { right: 25%; top: 30%; }
+  .bottle-dot { right: 50%; top: 50%; }
+  .pump-dot { right: 75%; top: 35%; }
   .thumbnail-item {
     width: 105px;
     border: 1px solid #1a3311;
