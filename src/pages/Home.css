@@ -571,6 +571,7 @@
   }
   .thumbnail-item {
     width: 105px;
+    border: 1px solid #1a3311;
     height: 150px;
     padding: 10px;
   }
