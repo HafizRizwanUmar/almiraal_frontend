@@ -564,7 +564,7 @@
   .hero-thumbnails { 
     justify-content: center; 
     flex-wrap: wrap; 
-    margin-top: 120px; /* Absolute push to bottom */
+    margin-top: 150px; /* Absolute push to bottom */
   }
   .hero-visual { display: none; }
   .form-row { flex-direction: column; gap: 0; }
