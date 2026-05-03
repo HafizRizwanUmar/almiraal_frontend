@@ -119,9 +119,6 @@ const Products = () => {
         </div>
 
         <div className="products-main">
-          {/* Dynamic Marketing Content */}
-          <ProductMarketing category={activeCategory} />
-
           {loading ? (
             <div className="loading-spinner">
               <div className="spinner"></div>
@@ -181,6 +178,9 @@ const Products = () => {
               <p>No products available in this category yet.</p>
             </div>
           )}
+
+          {/* Dynamic Marketing Content moved to bottom */}
+          <ProductMarketing category={activeCategory} />
         </div>
       </div>
     </div>

@@ -356,9 +356,15 @@ export default function Customize() {
         </div>
 
         {/* ── RIGHT: Assembly preview ── */}
-        <div className="cz-preview">
+        <div 
+          className="cz-preview" 
+          style={{ 
+            backgroundImage: `url(${pump ? '/bg2.png' : bottle ? '/bg1.png' : '/bg.png'})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        >
           <div className="cz-preview-content">
-            <div className="cz-preview-side-title">YOUR BOTTLE PREVIEW</div>
             <div className="cz-assembly">
             {/* Cap layer — top */}
             <div className={`cz-layer cz-layer-cap ${cap ? 'has-item' : ''}`}>

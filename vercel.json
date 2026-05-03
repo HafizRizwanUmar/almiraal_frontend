@@ -3,6 +3,10 @@
     {
       "source": "/api/(.*)",
       "destination": "https://almiraal-backend-blue.vercel.app/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

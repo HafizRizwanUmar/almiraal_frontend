@@ -489,7 +489,7 @@
   flex: 0 0 380px;
   width: 380px;
   /* Luxury studio background */
-  background: radial-gradient(circle at center, #ffffff 0%, #f4f7f0 100%);
+  background: #fff; /* Fallback for dynamic background */
   border-left: 1px solid #eee;
   display: flex;
   flex-direction: column;

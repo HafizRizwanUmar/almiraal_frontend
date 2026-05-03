@@ -20,19 +20,19 @@ const heroItems = [
 const serviceCards = [
   {
     badge: 'GLASS BOTTLE',
-    img: '/glasspackaging/glassbottle.png',
+    img: 'https://i.pinimg.com/1200x/ab/c8/c8/abc8c8d8d4902043962cfbaadf102587.jpg',
     title: 'Glass Bottle',
     desc: "Al Miraal's high-quality, transparent perfume glass bottles combine elegance and durability, elevating your fragrance brand."
   },
   {
     badge: 'BOTTLE DECORATION',
-    img: '/glasspackaging/bottledecoration.png',
+    img: 'https://i.pinimg.com/1200x/66/f4/b6/66f4b68c1e892370b5e28168a98f1aab.jpg',
     title: 'Bottle Decoration',
     desc: 'Al Miraal specialized in glass bottle decoration, offering hot stamping, screen printing, and colour coating.'
   },
   {
     badge: 'PRIVATE LABEL',
-    img: '/glasspackaging/privatelabel.png',
+    img: 'https://i.pinimg.com/1200x/d3/78/6d/d3786d1c9b9dbd186b73b4646e130700.jpg',
     title: 'Private Label',
     desc: 'We offer comprehensive private label solutions to help you build your unique fragrance brand.'
   }
