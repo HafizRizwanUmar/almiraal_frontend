@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import './ProductShowcase.css';
 
 const PRODUCTS = [
-  { id:0, label:'Glass Bottles',  subtitle:'PERFUME PACKAGING',  heading:'PERFUME GLASS BOTTLES', desc:'Al Miraal designs exquisite glass bottles to showcase your fragrance with elegance. We offer a variety of shapes and sizes to suit every brand in the UAE.', icon:'/svgs/bottles.svg',           image:'https://i.pinimg.com/736x/78/97/72/7897728b54917d74d57a197b96f37e6c.jpg', link:'/products?category=Perfume Bottle' },
-  { id:1, label:'Perfume Caps',   subtitle:'BOTTLE FINISHING',   heading:'PERFUME CAPS',           desc:'Our luxury perfume caps are crafted with precision engineering to deliver a perfect seal and stunning aesthetic. Choose from zinc, ABS, acrylic and wood.', icon:'/svgs/caps.svg',            image:'https://i.pinimg.com/736x/31/b7/34/31b73439df3523563339c15cde8950ee.jpg', link:'/products?category=Perfume Cap' },
-  { id:2, label:'Pumps & Collars',subtitle:'DISPENSING SYSTEMS', heading:'PUMPS & COLLARS',        desc:'From fine mist sprayers to robust pump assemblies, our dispensing solutions ensure smooth, consistent performance for every fragrance application.', icon:'/svgs/valf1.svg',           image:'https://i.pinimg.com/736x/b7/b0/94/b7b094f22668ce668e4f57877504e0e4.jpg', link:'/products?category=Pump & Collar' },
-  { id:3, label:'Diffusers',      subtitle:'HOME FRAGRANCE',     heading:'DIFFUSER BOTTLES',       desc:'Elegant diffuser bottles that blend seamlessly with any interior. Available in a range of volumes, neck sizes and glass textures for reed diffuser applications.', icon:'/productIcon/diffuser.png', image:'https://i.pinimg.com/736x/f4/88/e8/f488e87e4b6991d7f06dd1f68b3713d3.jpg', link:'/products?category=Diffuser' },
-  { id:4, label:'Cream Jars',     subtitle:'COSMETIC PACKAGING', heading:'CREAM JARS',             desc:'Wide-mouth cream jars ideal for luxury skincare brands. Available in glass and acrylic with various closure options and custom decoration.', icon:'/productIcon/creamicon.png', image:'https://i.pinimg.com/736x/c3/b7/a0/c3b7a06ab567a1730a8ac35ca83bc08d.jpg', link:'/products?category=Cream Jar' },
-  { id:5, label:'Serum Bottles',  subtitle:'SKINCARE PACKAGING', heading:'SERUM BOTTLES',          desc:'Sleek dropper and pump serum bottles for premium skincare lines. Available in amber, clear and frosted glass with gold or silver hardware.', icon:'/productIcon/serumicon.png', image:'https://i.pinimg.com/736x/fd/bf/a8/fdbfa88b1b21e2f970fd006d3161198b.jpg', link:'/products?category=Serum Bottle' },
+  { id: 0, label: 'Glass Bottles', subtitle: 'PERFUME PACKAGING', heading: 'PERFUME GLASS BOTTLES', desc: 'Al Miraal designs exquisite glass bottles to showcase your fragrance with elegance. We offer a variety of shapes and sizes to suit every brand in the UAE.', icon: '/svgs/bottles.svg', image: 'https://i.pinimg.com/736x/78/97/72/7897728b54917d74d57a197b96f37e6c.jpg', link: '/products?category=Perfume Bottle' },
+  { id: 1, label: 'Perfume Caps', subtitle: 'BOTTLE FINISHING', heading: 'PERFUME CAPS', desc: 'Our luxury perfume caps are crafted with precision engineering to deliver a perfect seal and stunning aesthetic. Choose from zinc, ABS, acrylic and wood.', icon: '/svgs/caps.svg', image: 'https://i.pinimg.com/736x/31/b7/34/31b73439df3523563339c15cde8950ee.jpg', link: '/products?category=Perfume Cap' },
+  { id: 2, label: 'Pumps & Collars', subtitle: 'DISPENSING SYSTEMS', heading: 'PUMPS & COLLARS', desc: 'From fine mist sprayers to robust pump assemblies, our dispensing solutions ensure smooth, consistent performance for every fragrance application.', icon: '/svgs/valf1.svg', image: 'https://i.pinimg.com/736x/b7/b0/94/b7b094f22668ce668e4f57877504e0e4.jpg', link: '/products?category=Pump & Collar' },
+  { id: 3, label: 'Diffusers', subtitle: 'HOME FRAGRANCE', heading: 'DIFFUSER BOTTLES', desc: 'Elegant diffuser bottles that blend seamlessly with any interior. Available in a range of volumes, neck sizes and glass textures for reed diffuser applications.', icon: '/productIcon/diffuser.png', image: 'https://i.pinimg.com/736x/f4/88/e8/f488e87e4b6991d7f06dd1f68b3713d3.jpg', link: '/products?category=Diffuser' },
+  { id: 4, label: 'Cream Jars', subtitle: 'COSMETIC PACKAGING', heading: 'CREAM JARS', desc: 'Wide-mouth cream jars ideal for luxury skincare brands. Available in glass and acrylic with various closure options and custom decoration.', icon: '/productIcon/creamicon.png', image: 'https://i.pinimg.com/736x/c3/b7/a0/c3b7a06ab567a1730a8ac35ca83bc08d.jpg', link: '/products?category=Cream Jar' },
+  { id: 5, label: 'Serum Bottles', subtitle: 'SKINCARE PACKAGING', heading: 'SERUM BOTTLES', desc: 'Sleek dropper and pump serum bottles for premium skincare lines. Available in amber, clear and frosted glass with gold or silver hardware.', icon: '/productIcon/serumicon.png', image: 'https://i.pinimg.com/736x/fd/bf/a8/fdbfa88b1b21e2f970fd006d3161198b.jpg', link: '/products?category=Serum Bottle' },
 ];
 
 /* Half-circle positions (left side of a circle, C-shape opening right)
@@ -19,8 +19,8 @@ const SLOT_CONFIGS = SLOT_ANGLES_DEG.map((a, i) => {
   const rad = (a * Math.PI) / 180;
   const x = CX + R * Math.cos(rad);
   const y = CY - R * Math.sin(rad);        // flip Y for SVG
-  const size   = [38, 48, 38][i];
-  const opacity= [0.65, 1, 0.65][i];
+  const size = [38, 48, 38][i];
+  const opacity = [0.65, 1, 0.65][i];
   return { x, y, size, opacity, isCenter: i === 1 };
 });
 
@@ -31,7 +31,7 @@ const HALF = Math.floor(VISIBLE / 2); // 1
 
 export default function ProductShowcase() {
   const [activeIdx, setActiveIdx] = useState(0);
-  const [imgKey, setImgKey]       = useState(0);
+  const [imgKey, setImgKey] = useState(0);
   const timerRef = useRef(null);
 
   const goTo = (i) => { setActiveIdx(i); setImgKey(k => k + 1); };
@@ -48,7 +48,7 @@ export default function ProductShowcase() {
   // Build 7 visible items, activeIdx maps to slot 3 (center)
   const visible = SLOT_CONFIGS.map((slot, si) => {
     const offset = si - HALF;
-    const idx    = ((activeIdx + offset) % N + N) % N;
+    const idx = ((activeIdx + offset) % N + N) % N;
     return { ...slot, product: PRODUCTS[idx], isActive: si === HALF };
   });
 

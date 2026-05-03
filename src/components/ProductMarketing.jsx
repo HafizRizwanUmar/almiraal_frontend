@@ -319,6 +319,57 @@ const PRODUCT_DATA = {
       <h4>Customized Finishes</h4>
       <p>Add a personal touch with engraved logos, metallic textures, or colored accents. Our decorative caps play a crucial role in reinforcing your brand’s image and value.</p>
     `
+  },
+  'Diffuser': {
+    title: 'Diffuser Bottles: Elegant Solutions for Home Fragrance',
+    content: `
+      <p>Diffuser bottles are the heart of home fragrance systems, combining aesthetic appeal with functional design. At Al Miraal, we offer a variety of diffuser bottles crafted to enhance any interior while providing optimal scent distribution.</p>
+      
+      <h4>Why Choose Al Miraal Diffuser Bottles?</h4>
+      <ul>
+        <li><strong>Elegant Designs:</strong> Our bottles are designed to be as beautiful as they are functional.</li>
+        <li><strong>High-Quality Glass:</strong> Ensures durability and protects the integrity of your fragrance oils.</li>
+        <li><strong>Versatile Sizes:</strong> Available in various volumes to suit different room sizes and needs.</li>
+        <li><strong>Customization:</strong> Options for frosting, coloring, and branding to match your home fragrance line.</li>
+      </ul>
+
+      <h4>Applications</h4>
+      <p>Our diffuser bottles are perfect for reed diffusers, essential oil blends, and other home fragrance products. They are an ideal choice for luxury brands and boutique fragrance creators alike.</p>
+    `
+  },
+  'Perfume Bottle Set': {
+    title: 'Perfume Bottle Sets: Complete and Professional Packaging',
+    content: `
+      <p>A perfume bottle set provides a comprehensive solution for brands looking for a cohesive and professional look. At Al Miraal, our sets include a high-quality glass bottle, a precision pump, and a matching cap, all designed to work perfectly together.</p>
+      
+      <h4>Benefits of Choosing a Set</h4>
+      <ul>
+        <li><strong>Guaranteed Compatibility:</strong> No need to worry about fitment issues between the bottle, pump, and cap.</li>
+        <li><strong>Consistent Brand Image:</strong> Coordinated designs ensure your product looks premium and well-thought-out.</li>
+        <li><strong>Streamlined Sourcing:</strong> Get everything you need from a single trusted supplier.</li>
+        <li><strong>Variety of Combinations:</strong> Choose from various bottle shapes and cap styles to create your unique set.</li>
+      </ul>
+
+      <h4>Ideal for Luxury Fragrance Lines</h4>
+      <p>Our 50ml and 100ml sets are particularly popular for premium perfume collections, offering a complete packaging experience that reflects the quality of the scent inside.</p>
+    `
+  },
+  'Screw Neck Bottle': {
+    title: 'Screw Neck Bottles: Secure, Versatile, and Reliable',
+    content: `
+      <p>Screw neck bottles offer a practical and secure packaging solution for a wide range of products. At Al Miraal, we provide robust screw neck glass bottles that are ideal for everything from perfumes to essential oils and cosmetic serums.</p>
+      
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Secure Seal:</strong> The screw neck design ensures a tight seal, preventing leaks and preserving the fragrance.</li>
+        <li><strong>Easy to Use:</strong> Simple to open and close, making them user-friendly for customers.</li>
+        <li><strong>Wide Compatibility:</strong> Works with a variety of screw caps, droppers, and dispensers.</li>
+        <li><strong>Durable Construction:</strong> High-quality glass that withstands regular use and protects the contents.</li>
+      </ul>
+
+      <h4>Versatile Applications</h4>
+      <p>Whether you need a reliable container for travel sizes, sample sets, or daily-use cosmetics, our screw neck bottles provide the durability and security your brand requires.</p>
+    `
   }
 };
 

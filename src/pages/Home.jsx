@@ -42,7 +42,7 @@ const CYCLE_WORDS = ['HOT STAMPING', 'SCREEN PRINTING', 'COLOUR COATING'];
 
 const Home = () => {
   const [cycleIdx, setCycleIdx] = useState(0);
-  const [activeCategory, setActiveCategory] = useState(window.innerWidth <= 900 ? 'none' : 'bottles');
+  const [activeCategory, setActiveCategory] = useState('none');
 
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [countryCode, setCountryCode] = useState('+971');

@@ -9,7 +9,11 @@ import {
   Pipette, 
   Droplets, 
   Container, 
-  Car 
+  Car,
+  Package,
+  Briefcase,
+  Search,
+  Filter
 } from 'lucide-react';
 import './Products.css';
 import ProductMarketing from '../components/ProductMarketing';
@@ -22,6 +26,9 @@ const Products = () => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 30;
+  
+  const [activeSize, setActiveSize] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Mapping slugs to Display Names
   const slugToCategory = {
@@ -33,7 +40,9 @@ const Products = () => {
     'plastic-spray': 'Plastic Sprayer',
     'serum-bottle': 'Serum Bottle',
     'cream-Jar': 'Cream Jar',
-    'car-perfume': 'Car Perfume'
+    'car-perfume': 'Car Perfume',
+    'perfume-bottle-set': 'Perfume Bottle Set',
+    'screw-neck': 'Screw Neck Bottle'
   };
 
   const categoryToSlug = Object.fromEntries(
@@ -52,6 +61,8 @@ const Products = () => {
     { name: 'Serum Bottle', icon: <Droplets /> },
     { name: 'Cream Jar', icon: <Container /> },
     { name: 'Car Perfume', icon: <Car /> },
+    { name: 'Perfume Bottle Set', icon: <Briefcase /> },
+    { name: 'Screw Neck Bottle', icon: <Package /> },
   ];
 
   useEffect(() => {
@@ -75,10 +86,20 @@ const Products = () => {
 
     fetchItems();
     setCurrentPage(1); // Reset page on category change
+    setActiveSize('All');
+    setSearchQuery('');
   }, [activeCategory]);
 
-  const totalPages = Math.ceil(items.length / itemsPerPage);
-  const paginatedItems = items.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const uniqueSizes = ['All', ...new Set(items.filter(i => i.size && i.size !== 'N/A').map(i => i.size))];
+
+  const filteredItems = items.filter(item => {
+    const matchesSize = activeSize === 'All' || item.size === activeSize;
+    const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesSize && matchesSearch;
+  });
+
+  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+  const paginatedItems = filteredItems.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   const handleNextPage = () => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
@@ -119,12 +140,36 @@ const Products = () => {
         </div>
 
         <div className="products-main">
+          <div className="products-top-filter-bar">
+            <div className="search-container">
+              <Search className="search-icon" size={18} />
+              <input 
+                type="text" 
+                placeholder="Search products..." 
+                value={searchQuery}
+                onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
+              />
+            </div>
+            <div className="size-filters">
+              <span className="filter-label"><Filter size={14} /> Size:</span>
+              {uniqueSizes.map(size => (
+                <button 
+                  key={size}
+                  className={`size-btn ${activeSize === size ? 'active' : ''}`}
+                  onClick={() => { setActiveSize(size); setCurrentPage(1); }}
+                >
+                  {size}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {loading ? (
             <div className="loading-spinner">
               <div className="spinner"></div>
               <span>Loading {activeCategory}...</span>
             </div>
-          ) : items.length > 0 ? (
+          ) : filteredItems.length > 0 ? (
             <>
               <div className="products-grid">
                 {paginatedItems.map((item) => (
