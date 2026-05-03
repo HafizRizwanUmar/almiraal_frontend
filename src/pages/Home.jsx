@@ -42,7 +42,7 @@ const CYCLE_WORDS = ['HOT STAMPING', 'SCREEN PRINTING', 'COLOUR COATING'];
 
 const Home = () => {
   const [cycleIdx, setCycleIdx]       = useState(0);
-  const [activeCategory, setActiveCategory] = useState('bottles');
+  const [activeCategory, setActiveCategory] = useState(window.innerWidth <= 900 ? 'none' : 'bottles');
 
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [countryCode, setCountryCode] = useState('+971');
@@ -119,7 +119,7 @@ const Home = () => {
         <div className="hero-content container">
           <div className="hero-text">
             <SplitText
-              text="Discover The Art of Glass"
+              text={isMobile ? "Discover The Art Of" : "Discover The Art of Glass"}
               className="hero-title line-1"
               delay={40}
               duration={0.8}
@@ -131,7 +131,7 @@ const Home = () => {
               tag="h1"
             />
             <SplitText
-              text="Perfume Packaging"
+              text={isMobile ? "Glass Perfume Glass Bottles" : "Perfume Packaging"}
               className="hero-title line-2"
               delay={100}
               duration={0.8}

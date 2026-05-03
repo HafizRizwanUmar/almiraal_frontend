@@ -604,11 +604,16 @@
     margin-top: 10px;
   }
   .hero-text h1 { 
-    font-weight: 900; 
-    font-size: 48px; 
+    font-weight: 800; 
+    font-size: 32px; 
     text-align: center;
     color: #1a3311; 
+    white-space: normal;
+    line-height: 1.1;
+    margin-bottom: 10px;
   }
+  .hero-title.line-1 { margin-bottom: 0px; }
+  .hero-title.line-2 { margin-top: 5px; max-width: 280px; }
   .hero-text p { display: none; }
   .hero-thumbnails { 
     display: flex;
@@ -631,6 +636,13 @@
   .cap-dot { right: 25%; top: 30%; }
   .bottle-dot { right: 50%; top: 50%; }
   .pump-dot { right: 75%; top: 35%; }
+  .hotspot-dot {
+    width: 18px;
+    height: 18px;
+  }
+  .hotspot-dot::after {
+    display: none !important;
+  }
   .thumbnail-item {
     width: 105px;
     border: 1px solid #1a3311;
