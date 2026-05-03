@@ -577,14 +577,14 @@
 
 /* Placeholder boxes */
 .cz-placeholder, .cz-placeholder-sm, .cz-placeholder-lg {
-  border: 1.5px dashed #ddd;
+  border: none;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
   font-size: 10px;
-  color: #ccc;
+  color: transparent;
   font-weight: 600;
   width: 100%;
   height: 100%;
@@ -633,11 +633,13 @@
     max-height: none;
     border-bottom: 1px solid #eee;
     padding: 20px;
+    background-size: 80% !important;
+    background-repeat: no-repeat;
   }
   .cz-assembly { width: 100%; height: 280px; }
-  .cz-layer-cap    { height: 80px; width: 120px; bottom: 180px; }
+  .cz-layer-cap    { height: 90px; width: 130px; bottom: 180px; }
   .cz-layer-pump   { height: 60px; width: 80px; bottom: 180px; }
-  .cz-layer-bottle { height: 240px; width: 200px; bottom: 0; }
+  .cz-layer-bottle { height: 260px; width: 200px; bottom: 0; }
   .cz-panel { max-height: none; padding: 20px; }
   .cz-nav-btns.sticky { padding: 15px 20px; }
 }
@@ -674,7 +676,7 @@
 @media (max-width: 480px) {
   .cz-step-label { display: none; }
   .cz-step-num { width: 28px; height: 28px; font-size: 11px; }
-  .cz-preview { height: 300px; }
+  .cz-preview { height: 300px; background-size: 70% !important; }
   .cz-layer-cap    { height: 60px; width: 100px; bottom: 160px; }
   .cz-layer-pump   { height: 45px; width: 65px; bottom: 160px; }
   .cz-layer-bottle { height: 200px; width: 160px; bottom: 0; }

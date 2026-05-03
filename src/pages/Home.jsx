@@ -41,7 +41,7 @@ const serviceCards = [
 const CYCLE_WORDS = ['HOT STAMPING', 'SCREEN PRINTING', 'COLOUR COATING'];
 
 const Home = () => {
-  const [cycleIdx, setCycleIdx]       = useState(0);
+  const [cycleIdx, setCycleIdx] = useState(0);
   const [activeCategory, setActiveCategory] = useState(window.innerWidth <= 900 ? 'none' : 'bottles');
 
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
@@ -56,10 +56,10 @@ const Home = () => {
     { code: '+968', name: 'OM' },
     { code: '+974', name: 'QA' },
     { code: '+973', name: 'BH' },
-    { code: '+1',   name: 'USA' },
-    { code: '+44',  name: 'UK' },
-    { code: '+91',  name: 'IN' },
-    { code: '+92',  name: 'PK' }
+    { code: '+1', name: 'USA' },
+    { code: '+44', name: 'UK' },
+    { code: '+91', name: 'IN' },
+    { code: '+92', name: 'PK' }
   ];
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
@@ -119,7 +119,7 @@ const Home = () => {
         <div className="hero-content container">
           <div className="hero-text">
             <SplitText
-              text={isMobile ? "Discover The Art Of" : "Discover The Art of Glass"}
+              text={isMobile ? "Discover The Art of" : "Discover The Art of Glass"}
               className="hero-title line-1"
               delay={40}
               duration={0.8}
@@ -131,7 +131,7 @@ const Home = () => {
               tag="h1"
             />
             <SplitText
-              text={isMobile ? "Glass Perfume Glass Bottles" : "Perfume Packaging"}
+              text={isMobile ? "Glass Perfume Packaging" : "Perfume Packaging"}
               className="hero-title line-2"
               delay={100}
               duration={0.8}
@@ -145,13 +145,13 @@ const Home = () => {
 
             <p>Welcome to Al Miraal! We are the top choice for perfume <br></br> packaging that combines high quality with great design. <br></br>Our collection of perfume bottles has everything you need to make your <br></br>brand shine. From stylish designs to durable materials, we <br></br>provide the best options to suit your needs and budget.</p>
           </div>
-          
+
           <div className="hero-thumbnails">
             {currentThumbnails.map(item => (
               <div
                 key={item.id}
-                onMouseEnter={() => {}}
-                onMouseLeave={() => {}}
+                onMouseEnter={() => { }}
+                onMouseLeave={() => { }}
                 className="thumbnail-item"
               >
                 <img src={item.thumb} alt={item.label} />
@@ -161,20 +161,20 @@ const Home = () => {
 
           {/* HOTSPOT DOTS */}
           <div className="hero-hotspots">
-            <div 
-              className={`hotspot-dot cap-dot ${activeCategory === 'caps' ? 'active' : ''}`} 
+            <div
+              className={`hotspot-dot cap-dot ${activeCategory === 'caps' ? 'active' : ''}`}
               onMouseEnter={() => setActiveCategory('caps')}
               onMouseLeave={() => setActiveCategory('mixed')}
               data-label="Luxury Caps"
             ></div>
-            <div 
-              className={`hotspot-dot bottle-dot ${activeCategory === 'bottles' ? 'active' : ''}`} 
+            <div
+              className={`hotspot-dot bottle-dot ${activeCategory === 'bottles' ? 'active' : ''}`}
               onMouseEnter={() => setActiveCategory('bottles')}
               onMouseLeave={() => setActiveCategory('mixed')}
               data-label="Premium Bottles"
             ></div>
-            <div 
-              className={`hotspot-dot pump-dot ${activeCategory === 'pumps' ? 'active' : ''}`} 
+            <div
+              className={`hotspot-dot pump-dot ${activeCategory === 'pumps' ? 'active' : ''}`}
               onMouseEnter={() => setActiveCategory('pumps')}
               onMouseLeave={() => setActiveCategory('mixed')}
               data-label="Precision Pumps"
@@ -230,10 +230,10 @@ const Home = () => {
                 <form className="contact-form-v2" onSubmit={handleInquirySubmit}>
                   <div className="form-row">
                     <div className="form-group">
-                      <input type="text" placeholder="Your Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} required />
+                      <input type="text" placeholder="Your Name" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} required />
                     </div>
                     <div className="form-group">
-                      <input type="email" placeholder="Your Email" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} required />
+                      <input type="email" placeholder="Your Email" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} required />
                     </div>
                   </div>
                   <div className="phone-row">
@@ -244,10 +244,10 @@ const Home = () => {
                         ))}
                       </select>
                     </div>
-                    <input type="text" placeholder="Enter phone number" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} required />
+                    <input type="text" placeholder="Enter phone number" value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value })} required />
                   </div>
                   <div className="form-group">
-                    <textarea placeholder="Your Message" rows="4" value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})} required></textarea>
+                    <textarea placeholder="Your Message" rows="4" value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })} required></textarea>
                   </div>
                   <button type="submit" className="btn-send-message" disabled={loading}>
                     {loading ? 'Sending...' : 'Send Message'} <ArrowRight size={16} style={{ marginLeft: 8 }} />
@@ -263,7 +263,7 @@ const Home = () => {
       </div>
 
       <a href="https://wa.me/971000000000" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
       </a>
     </div>
   );

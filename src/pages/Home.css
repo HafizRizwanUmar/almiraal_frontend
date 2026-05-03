@@ -580,7 +580,7 @@
   .hero-section { 
     min-height: 95vh; 
     height: auto; 
-    padding: 100px 0 0; /* No bottom padding here */
+    padding: 20px 0 0; /* Near the very top */
     background: url('/Banner/7.jpg') no-repeat center center / cover;
     display: flex;
     flex-direction: column;
@@ -601,7 +601,7 @@
     text-align: center; 
     width: 100%; 
     max-width: 100%; 
-    margin-top: 10px;
+    margin-top: 0;
   }
   .hero-text h1 { 
     font-weight: 800; 
@@ -613,7 +613,7 @@
     margin-bottom: 10px;
   }
   .hero-title.line-1 { margin-bottom: 0px; }
-  .hero-title.line-2 { margin-top: 5px; max-width: 280px; }
+  .hero-title.line-2 { margin-top: 5px; max-width: 220px; }
   .hero-text p { display: none; }
   .hero-thumbnails { 
     display: flex;
@@ -633,9 +633,9 @@
     width: 100%;
     height: 100%;
   }
-  .cap-dot { right: 25%; top: 30%; }
+  .cap-dot { right: 80%; top: 60%; }
   .bottle-dot { right: 50%; top: 50%; }
-  .pump-dot { right: 75%; top: 35%; }
+  .pump-dot { right: 25%; top: 35%; }
   .hotspot-dot {
     width: 18px;
     height: 18px;
