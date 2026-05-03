@@ -359,7 +359,7 @@ export default function Customize() {
         <div 
           className="cz-preview" 
           style={{ 
-            backgroundImage: `url(${pump ? '/bg2.png' : bottle ? '/bg1.png' : '/bg.png'})`,
+            backgroundImage: cap ? 'none' : `url(${pump ? '/bg2.png' : bottle ? '/bg1.png' : '/bg.png'})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
