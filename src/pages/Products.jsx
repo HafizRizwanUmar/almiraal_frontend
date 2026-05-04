@@ -13,7 +13,8 @@ import {
   Package,
   Briefcase,
   Search,
-  Filter
+  Filter,
+  FileText
 } from 'lucide-react';
 import './Products.css';
 import ProductMarketing from '../components/ProductMarketing';

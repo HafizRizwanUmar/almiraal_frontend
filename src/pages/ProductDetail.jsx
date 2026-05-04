@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ChevronLeft, Download, ExternalLink, Package, Shield, Truck } from 'lucide-react';
+import { ChevronLeft, Download, ExternalLink, Shield, Truck } from 'lucide-react';
 import './ProductDetail.css';
 
 const API = import.meta.env.VITE_API_URL || '';
@@ -79,9 +79,6 @@ const ProductDetail = () => {
                 <Download size={20} /> Download Technical Specs (PDF)
               </a>
             )}
-            <button className="pd-quote-btn" onClick={() => navigate('/customize')}>
-              <Package size={20} /> Configure in Studio
-            </button>
           </div>
 
           <div className="pd-perks">

@@ -279,13 +279,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(26, 51, 17, 0.9) 0%, rgba(26, 51, 17, 0.4) 100%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 5;
 }
 
@@ -316,8 +318,18 @@
 
 .product-info-overlay {
   text-align: center;
-  margin-bottom: auto;
-  margin-top: 30px;
+  padding: 20px;
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(26, 51, 17, 0.85);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-item-card:hover .product-info-overlay {
+  transform: translateY(0);
 }
 
 .product-info-overlay h4 {
@@ -328,18 +340,51 @@
 }
 
 .product-info-overlay p {
-  font-size: 0.9rem;
-  color: #e0e0e0;
+  font-size: 0.85rem;
+  color: #c8dda8;
   font-weight: 500;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  margin-bottom: 0;
 }
 
 .view-details-action {
+  background: white;
+  color: #1a3311;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 30px;
+  gap: 10px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.product-item-card:hover .view-details-action {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.view-details-action:hover {
+  background: #85B344;
+  color: white;
+  border-color: #85B344;
+  transform: scale(1.05) !important;
+}
+
+.view-details-action img {
+  width: 18px !important;
+  height: 18px !important;
+  filter: none !important;
+}
+
+.view-details-action:hover img {
+  filter: brightness(0) invert(1) !important;
 }
 
 .pagination-controls {
