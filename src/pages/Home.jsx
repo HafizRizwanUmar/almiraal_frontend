@@ -12,9 +12,9 @@ import MarketingContent from '../components/MarketingContent';
    Hero thumbnail data
 ------------------------------------------------------- */
 const heroItems = [
-  { id: 10, thumb: '/catalog_products/and-perfume-bottle-4942.png', label: 'Bottle' },
-  { id: 11, thumb: '/catalog_products/angel-perfume-bottle-4952.png', label: 'Bottle' },
-  { id: 12, thumb: '/catalog_products/atlas-perfume-bottle-4963.png', label: 'Bottle' }
+  { id: 10, thumb: '/catalog_products/perfume-bottle/and/and-4942.png', label: 'Bottle' },
+  { id: 11, thumb: '/catalog_products/perfume-bottle/angel/angel-4952.png', label: 'Bottle' },
+  { id: 12, thumb: '/catalog_products/perfume-bottle/atlas/atlas-4963.png', label: 'Bottle' }
 ];
 
 const serviceCards = [
@@ -98,14 +98,14 @@ const Home = () => {
   const categoryThumbnails = {
     bottles: heroItems,
     caps: [
-      { id: 20, thumb: '/catalog_products/12-perfume-cap-4435.png', label: 'Cap' },
-      { id: 21, thumb: '/catalog_products/amour-perfume-cap-4493.png', label: 'Cap' },
-      { id: 22, thumb: '/catalog_products/arrow-perfume-cap-4497.png', label: 'Cap' }
+      { id: 20, thumb: '/catalog_products/perfume-cap/12/12-4435.png', label: 'Cap' },
+      { id: 21, thumb: '/catalog_products/perfume-cap/amour/amour-4493.png', label: 'Cap' },
+      { id: 22, thumb: '/catalog_products/perfume-cap/arrow/arrow-4497.png', label: 'Cap' }
     ],
     pumps: [
-      { id: 30, thumb: '/catalog_products/15-mm-matte-pump-5674.png', label: 'Pump' },
-      { id: 31, thumb: '/catalog_products/18-mm-pump-pump-5678.png', label: 'Pump' },
-      { id: 32, thumb: '/catalog_products/20-mm-pump-pump-5682.png', label: 'Pump' }
+      { id: 30, thumb: '/catalog_products/perfume-bottle/15-mm-matte-pump/15-mm-matte-pump-5674.png', label: 'Pump' },
+      { id: 31, thumb: '/catalog_products/perfume-bottle/18-mm-pump-pump/18-mm-pump-pump-5678.png', label: 'Pump' },
+      { id: 32, thumb: '/catalog_products/perfume-bottle/20-mm-pump-pump/20-mm-pump-pump-5682.png', label: 'Pump' }
     ]
   };
 
