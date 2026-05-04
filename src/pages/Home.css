@@ -23,13 +23,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   position: relative;
   z-index: 2;
   /* Content pushed down behind fixed navbar */
   padding-top: 100px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 }
 
 .hero-text {
@@ -37,10 +37,10 @@
 }
 
 .hero-text h1 {
-  font-family: 'Raleway', sans-serif;
-  font-size: 44px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
   line-height: 1.1;
-  font-weight: 500;
+  font-weight: 400;
   color: #1a3311;
   margin-bottom: 18px;
   text-transform: uppercase;
@@ -70,11 +70,11 @@
   height: 175px;
   background: white;
   border: 2px solid #1a3311;
-  border-radius: 12px;
+  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -219,12 +219,12 @@
    SERVICES / HOT STAMPING
 =================================================== */
 .services-section {
-  padding: 100px 0;
+  padding: 20px 0;
   background-color: #fff;
   text-align: center;
 }
 
-.services-header { margin-bottom: 55px; }
+.services-header { margin-bottom: 20px; }
 
 .services-header h2 {
   font-family: 'Raleway', sans-serif;
@@ -287,9 +287,8 @@
   position: absolute;
   top: 24px;
   left: 24px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  color: #1a3311;
+  background: #d1d5db;
+  color: #374151;
   padding: 8px 18px;
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
@@ -298,7 +297,8 @@
   letter-spacing: 1px;
   z-index: 10;
   text-transform: uppercase;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: none; /* Ensure no transition on hover */
 }
 
 .card-image-full {
@@ -364,7 +364,7 @@
 =================================================== */
 .reach-out-section-v2 {
   background: #0a0a0a url('/topographical_bg.png') no-repeat center center / cover;
-  padding: 100px 0;
+  padding: 20px 0;
   color: white;
   overflow: hidden;
 }
@@ -604,7 +604,8 @@
     margin-top: 0;
   }
   .hero-text h1 { 
-    font-weight: 800; 
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400; 
     font-size: 32px; 
     text-align: center;
     color: #1a3311; 
@@ -656,7 +657,7 @@
 @media (max-width: 768px) {
   .services-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
   .services-header h2 { font-size: 32px; }
-  .hero-text h1 { font-size: 28px; }
+  .hero-text h1 { font-family: 'Oswald', sans-serif; font-size: 28px; }
   .contact-card { padding: 28px 20px; }
   .services-section { padding: 60px 0; }
   .thumbnail-item { width: 100px; height: 110px; }
@@ -665,7 +666,7 @@
 }
 
 @media (max-width: 480px) {
-  .hero-text h1 { font-size: 24px; }
+  .hero-text h1 { font-family: 'Oswald', sans-serif; font-size: 24px; }
   .services-header h2 { font-size: 26px; }
   .cycling-word { font-size: 26px; }
   .thumbnail-item { width: 85px; height: 95px; }

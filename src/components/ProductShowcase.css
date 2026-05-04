@@ -4,6 +4,7 @@
 
 .ps-section {
   background: #f8faf5;
+  padding: 20px 0;
   min-height: 540px;
   overflow: hidden;
 }
