@@ -4,7 +4,7 @@
 
 .ps-section {
   background: #f8faf5;
-  padding: 20px 0;
+  padding: 0;
   min-height: 540px;
   overflow: hidden;
 }
@@ -74,16 +74,16 @@
 }
 
 .ps-h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 44px;
   font-weight: 500;
-  color: #1a3311;
+  color: #245117;
   line-height: 1.1;
   margin-bottom: 16px;
 }
 
 .ps-intro {
-  font-family: 'Mada', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14.5px;
   color: #777;
   line-height: 1.75;
@@ -98,7 +98,7 @@
 }
 
 .ps-h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 26px;
   font-weight: 500;
   color: #85B344;
@@ -106,7 +106,7 @@
 }
 
 .ps-body {
-  font-family: 'Mada', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14.5px;
   color: #666;
   line-height: 1.75;
