@@ -195,7 +195,7 @@
 .explore-services {
   position: absolute;
   right: 20px;
-  top: 50%;
+  top: 65%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -533,7 +533,7 @@
   right: 30px;
   width: 56px;
   height: 56px;
-  background-color: #09811d;
+  background-color: #85B344;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -544,7 +544,7 @@
 }
 
 .whatsapp-float:hover {
-  background-color: #15b946;
+  background-color: #6a9b34;
   transform: scale(1.1);
 }
 

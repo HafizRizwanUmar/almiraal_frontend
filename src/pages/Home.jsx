@@ -143,7 +143,7 @@ const Home = () => {
               tag="h1"
             />
 
-            <p>Welcome to Al Miraal! We are the top choice for perfume <br></br> packaging that combines high quality with great design. <br></br>Our collection of perfume bottles has everything you need to <br></br>make your brand shine. From stylish designs to durable materials,  <br></br>we provide the best options to suit your needs and budget.</p>
+            <p>Welcome to Al Miraal! We are the top choice for perfume packaging that combines high quality with great design. Our collection of perfume bottles has everything you need to make your brand shine. From stylish designs to durable materials, we provide the best options to suit your needs and budget.</p>
           </div>
 
           <div className="hero-thumbnails">
