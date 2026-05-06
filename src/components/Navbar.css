@@ -43,7 +43,7 @@
 
 .nav-link {
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #1a3311;
   text-decoration: none;
@@ -100,7 +100,7 @@
   padding: 11px 22px;
   text-decoration: none;
   color: #333;
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
   transition: background 0.2s, color 0.2s;
@@ -122,15 +122,22 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0 20px;
+  width: auto;
+  padding: 0 30px;
+  justify-content: center;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   color: #1a3311;
   position: relative;
   transition: background 0.3s ease;
   white-space: nowrap;
+}
+
+.btn-text {
+  position: relative;
+  display: inline-block;
 }
 
 .btn-contact  { background-color: #dce9c6; }
@@ -148,41 +155,20 @@
   transform: scale(1);
 }
 
-/* Diamond – default visible */
 .diamond {
-  width: 7px;
-  height: 7px;
+  position: absolute;
+  top: -8px; /* On top of the last character */
+  right: -10px; /* End of the text */
+  width: 6px;
+  height: 6px;
   background-color: #1a3311;
   transform: rotate(45deg);
-  margin-bottom: 14px; /* Pulls it to the top right of text */
   flex-shrink: 0;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .nav-btn:hover .diamond {
-  opacity: 0;
-  transform: rotate(45deg) scale(0);
-}
-
-/* Arrow circle – hidden by default, shown on hover */
-.arrow-circle {
-  width: 28px;
-  height: 28px;
-  background-color: #1a3311;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.nav-btn:hover .arrow-circle {
-  opacity: 1;
-  transform: scale(1);
+  opacity: 1; /* Keep it visible */
 }
 
 /* Responsive */
@@ -233,7 +219,7 @@
   }
 
   .nav-center.mobile-show .nav-link {
-    font-size: 18px;
+    font-size: 20px;
     padding: 12px 0;
     border-bottom: 1px solid #f0f0f0;
     width: 100%;

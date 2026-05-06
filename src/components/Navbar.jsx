@@ -85,14 +85,16 @@ const Navbar = () => {
 
       <div className="nav-right">
         <Link to="/contact" className={`nav-btn btn-contact ${location.pathname === '/contact' ? 'active' : ''}`}>
-          CONTACT US
-          <div className="diamond"></div>
-          <div className="arrow-circle"><ArrowRight size={14} /></div>
+          <span className="btn-text">
+            CONTACT US
+            <div className="diamond"></div>
+          </span>
         </Link>
         <Link to="/customize" className={`nav-btn btn-customize ${location.pathname === '/customize' ? 'active' : ''}`}>
-          CUSTOMIZE BOTTLE
-          <div className="diamond"></div>
-          <div className="arrow-circle"><ArrowRight size={14} /></div>
+          <span className="btn-text">
+            CUSTOMIZE BOTTLE
+            <div className="diamond"></div>
+          </span>
         </Link>
       </div>
 
