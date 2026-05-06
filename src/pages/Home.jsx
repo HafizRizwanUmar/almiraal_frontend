@@ -12,29 +12,29 @@ import MarketingContent from '../components/MarketingContent';
    Hero thumbnail data
 ------------------------------------------------------- */
 const heroItems = [
-  { id: 10, thumb: '/catalog_products/perfume-bottle/and/and-4942.png', label: 'Bottle' },
-  { id: 11, thumb: '/catalog_products/perfume-bottle/angel/angel-4952.png', label: 'Bottle' },
-  { id: 12, thumb: '/catalog_products/perfume-bottle/atlas/atlas-4963.png', label: 'Bottle' }
+  { id: 10, thumb: '/hero_folder/BoltlesDes/4.jpg', label: 'Bottle' },
+  { id: 11, thumb: '/hero_folder/BoltlesDes/5.jpg', label: 'Bottle' },
+  { id: 12, thumb: '/hero_folder/BoltlesDes/6.jpg', label: 'Bottle' }
 ];
 
 const serviceCards = [
   {
     badge: 'GLASS BOTTLE',
-    img: 'https://i.pinimg.com/1200x/ab/c8/c8/abc8c8d8d4902043962cfbaadf102587.jpg',
+    img: '/glasspackaging/glassbottle.png',
     title: 'Glass Bottle',
-    desc: "Al Miraal's high-quality, transparent perfume glass bottles combine elegance and durability, elevating your fragrance brand."
+    desc: "Al Miraal’s high-quality, transparent perfume glass bottles combine elegance and durability, elevating your fragrance brand. Crafted with precision, these stunning perfume Glass bottles showcase your scents beautifully, ensuring a lasting impression on customers."
   },
   {
     badge: 'BOTTLE DECORATION',
-    img: 'https://i.pinimg.com/1200x/66/f4/b6/66f4b68c1e892370b5e28168a98f1aab.jpg',
+    img: '/glasspackaging/bottledecoration.png',
     title: 'Bottle Decoration',
-    desc: 'Al Miraal specialized in glass bottle decoration, offering hot stamping, screen printing, and colour coating.'
+    desc: "Al Miraal specializes in exquisite bottle decoration that transforms your perfume glass bottles into works of art. Our high-quality designs enhance the visual appeal of your products, making them stand out on the shelves. We create stunning decorations that reflect your brand’s identity and leave a lasting impression on customers."
   },
   {
     badge: 'PRIVATE LABEL',
-    img: 'https://i.pinimg.com/1200x/d3/78/6d/d3786d1c9b9dbd186b73b4646e130700.jpg',
+    img: '/glasspackaging/privatelabel.png',
     title: 'Private Label',
-    desc: 'We offer comprehensive private label solutions to help you build your unique fragrance brand.'
+    desc: "Bring your brand to life with Al Miraal’s private label expertise. We provide customized fragrance lines with premium bottle designs and quality formulations, helping your products stand out and make an unforgettable impression. Let’s create a fragrance that’s uniquely yours and ready to captivate."
   }
 ];
 
@@ -98,14 +98,14 @@ const Home = () => {
   const categoryThumbnails = {
     bottles: heroItems,
     caps: [
-      { id: 20, thumb: '/catalog_products/perfume-cap/12/12-4435.png', label: 'Cap' },
-      { id: 21, thumb: '/catalog_products/perfume-cap/amour/amour-4493.png', label: 'Cap' },
-      { id: 22, thumb: '/catalog_products/perfume-cap/arrow/arrow-4497.png', label: 'Cap' }
+      { id: 20, thumb: '/hero_folder/caps/Bello.png', label: 'Cap' },
+      { id: 21, thumb: '/hero_folder/caps/Roamy (2).png', label: 'Cap' },
+      { id: 22, thumb: '/hero_folder/caps/Roll.png', label: 'Cap' }
     ],
     pumps: [
-      { id: 30, thumb: '/catalog_products/perfume-bottle/15-mm-matte-pump/15-mm-matte-pump-5674.png', label: 'Pump' },
-      { id: 31, thumb: '/catalog_products/perfume-bottle/18-mm-pump-pump/18-mm-pump-pump-5678.png', label: 'Pump' },
-      { id: 32, thumb: '/catalog_products/perfume-bottle/20-mm-pump-pump/20-mm-pump-pump-5682.png', label: 'Pump' }
+      { id: 30, thumb: '/hero_folder/pump/3-2543.png', label: 'Pump' },
+      { id: 31, thumb: '/hero_folder/pump/4-2549.png', label: 'Pump' },
+      { id: 32, thumb: '/hero_folder/pump/5-2555.png', label: 'Pump' }
     ]
   };
 
@@ -183,7 +183,7 @@ const Home = () => {
         </div>
         <div className="explore-services">
           <span>EXPLORE OUR SERVICES</span>
-          <ArrowDown size={16} />
+          <ArrowDown size={24} />
         </div>
       </div>
 

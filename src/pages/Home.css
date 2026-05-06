@@ -52,7 +52,7 @@
 
 .hero-text p {
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-size: 1.25rem;
   line-height: 1.6;
   color: #555;
   margin-bottom: 0;
@@ -72,11 +72,11 @@
   height: 175px;
   background: white;
   border: 2px solid #1a3311;
-  border-radius: 24px;
+  border-radius: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  padding: 0;
   cursor: pointer;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -91,7 +91,13 @@
 .thumbnail-item img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-item img[alt="Cap"] {
   object-fit: contain;
+  padding: 0;
+  transform: scale(1.2);
 }
 
 /* ---- HERO HOTSPOTS ---- */
@@ -188,16 +194,13 @@
 /* ---- EXPLORE OUR SERVICES — right edge ---- */
 .explore-services {
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 14px 8px;
-  background: rgba(133,179,68,0.92);
-  border-radius: 8px 0 0 8px;
+  gap: 20px;
   z-index: 5;
 }
 
@@ -205,15 +208,15 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-family: 'Poppins', sans-serif;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
-  color: white;
-  letter-spacing: 2px;
+  color: #4b4b4b;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
 }
 
 .explore-services svg {
-  color: white;
+  color: #333;
   animation: bounce 2.5s infinite;
 }
 
@@ -282,7 +285,7 @@
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 30px 60px rgba(133, 179, 68, 0.15);
+  box-shadow: 0 30px 60px rgba(26, 51, 17, 0.15);
 }
 
 .card-badge {
@@ -328,9 +331,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(133, 179, 68, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(133, 179, 68, 0.45);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
   padding: 40px 30px;
   text-align: center;
@@ -650,7 +654,7 @@
     width: 105px;
     border: 1px solid #1a3311;
     height: 170px;
-    padding: 10px;
+    padding: 0;
   }
   .hero-visual { display: none; }
   .form-row { flex-direction: column; gap: 0; }
@@ -663,6 +667,7 @@
   .contact-card { padding: 28px 20px; }
   .services-section { padding: 60px 0; }
   .thumbnail-item { width: 100px; height: 110px; }
+  .thumbnail-item img[alt="Cap"] { padding: 0; transform: scale(1.2); }
   .reach-out-section-v2 { padding: 60px 0; }
   .service-card { height: 450px; }
 }
