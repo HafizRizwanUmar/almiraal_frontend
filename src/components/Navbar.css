@@ -115,18 +115,18 @@
 .nav-right {
   display: flex;
   height: 100%;
-  gap: 1px; /* Small separation */
+  gap: 0; /* Buttons touch each other */
 }
 
 .nav-btn {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 0 36px;
+  gap: 8px;
+  padding: 0 20px;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
   color: #1a3311;
   position: relative;
   transition: background 0.3s ease;
@@ -134,7 +134,7 @@
 }
 
 .btn-contact  { background-color: #dce9c6; }
-.btn-customize{ background-color: #a6cd6c; }
+.btn-customize{ background-color: #97c255; } /* Updated to match reference image */
 .btn-contact:hover, .btn-contact.active { background-color: #cce0ae; }
 .btn-customize:hover, .btn-customize.active { background-color: #97c255; }
 
@@ -150,10 +150,11 @@
 
 /* Diamond – default visible */
 .diamond {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background-color: #1a3311;
   transform: rotate(45deg);
+  margin-bottom: 14px; /* Pulls it to the top right of text */
   flex-shrink: 0;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }

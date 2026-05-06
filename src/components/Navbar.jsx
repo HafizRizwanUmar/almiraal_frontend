@@ -78,7 +78,7 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div className="mobile-only-links">
             <Link to="/contact" className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>CONTACT US</Link>
-            <Link to="/customize" className={`nav-link ${location.pathname === '/customize' ? 'active' : ''}`}>CUSTOMIZE</Link>
+            <Link to="/customize" className={`nav-link ${location.pathname === '/customize' ? 'active' : ''}`}>CUSTOMIZE BOTTLE</Link>
           </div>
         )}
       </div>
@@ -90,7 +90,7 @@ const Navbar = () => {
           <div className="arrow-circle"><ArrowRight size={14} /></div>
         </Link>
         <Link to="/customize" className={`nav-btn btn-customize ${location.pathname === '/customize' ? 'active' : ''}`}>
-          CUSTOMIZE
+          CUSTOMIZE BOTTLE
           <div className="diamond"></div>
           <div className="arrow-circle"><ArrowRight size={14} /></div>
         </Link>
